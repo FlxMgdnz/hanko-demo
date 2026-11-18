@@ -22,7 +22,7 @@ Der Produktionsbuild liegt in `dist/`. Eine Preview auf einem anderen Port benö
 
 ## Hanko konfigurieren
 
-Die öffentliche Projekt-API-URL steht in `.env`. Sie ist kein Geheimnis und wird im Frontend verwendet. Für ein anderes Projekt kann sie in der ignorierten Datei `.env.local` überschrieben werden. Niemals Admin-API-Keys oder andere Geheimnisse in `VITE_*`-Variablen speichern.
+Die öffentliche Projekt-API-URL für die lokale Entwicklung steht in `.env`. Der Produktionsbuild (`npm run build`) und GitHub Pages verwenden das separate Hanko-Projekt aus `.env.production`. Die URLs sind keine Geheimnisse und werden im Frontend verwendet. Lokale Abweichungen können in den ignorierten Dateien `.env.development.local` bzw. `.env.production.local` hinterlegt werden. Niemals Admin-API-Keys oder andere Geheimnisse in `VITE_*`-Variablen speichern.
 
 Im Hanko-Cloud-Projekt:
 
@@ -48,9 +48,9 @@ Die Demo-Anträge sind statische, öffentlich abrufbare Beispieldaten. Eine Zugr
 1. Ein öffentliches GitHub-Repository erstellen und dieses lokale Repository dorthin pushen (Branch `main`).
 2. Unter **Settings → Pages → Build and deployment → Source** die Option **GitHub Actions** auswählen.
 3. Der Workflow `.github/workflows/deploy.yml` baut und veröffentlicht bei Pushes auf `main`. Er lässt sich auch manuell starten.
-4. Die finale URL in Hanko konfigurieren und die produktive Hanko-API-URL bei Bedarf in `.env` aktualisieren.
+4. Die finale URL im produktiven Hanko-Projekt konfigurieren und dessen API-URL bei Bedarf in `.env.production` aktualisieren.
 
-Repository: https://github.com/FlxMgdnz/hanko-demo. Der Deployment-Workflow ist vorbereitet; GitHub Pages muss vor dem ersten Deployment wie oben beschrieben aktiviert werden.
+Repository: https://github.com/FlxMgdnz/hanko-demo. GitHub Pages ist aktiviert: https://flxmgdnz.github.io/hanko-demo/.
 
 ## Funktionsprüfung mit einem Testkonto
 
