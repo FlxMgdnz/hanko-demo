@@ -1,0 +1,66 @@
+:root { --app-font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; font-family: var(--app-font-family); color: #20362f; background: #f5f6f2; font-synthesis: none; line-height: 1.6; }
+* { box-sizing: border-box; }
+body { margin: 0; }
+a { color: #244c40; text-underline-offset: 4px; }
+button, input { font: inherit; }
+button, summary, a { -webkit-tap-highlight-color: transparent; }
+button, summary { cursor: pointer; }
+:focus-visible { outline: 3px solid #a36c25; outline-offset: 4px; }
+.skip-link { position: fixed; top: -80px; left: 16px; z-index: 10; padding: 12px; background: white; }
+.skip-link:focus { top: 12px; }
+.topbar { background: #fff; border-bottom: 1px solid #e0e5de; }
+.bar-inner { max-width: 1120px; margin: auto; padding: 20px 32px; display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+.brand { text-decoration: none; display: flex; gap: 12px; align-items: center; font-weight: 750; letter-spacing: -.5px; font-size: 20px; }
+.brand-mark { display: grid; place-items: center; width: 36px; height: 36px; background: #244c40; color: white; border-radius: 10px; font-size: 22px; }
+.demo-label, .eyebrow { font-size: 12px; text-transform: uppercase; letter-spacing: 1.5px; font-weight: 650; }
+.demo-label { color: #6a746e; }
+.account { position: relative; }
+.account summary { display: inline-flex; align-items: center; gap: 8px; list-style: none; padding: 8px 14px; border: 1px solid #d9e0d9; border-radius: 8px; font-size: 14px; }
+.account summary::-webkit-details-marker { display: none; }
+.account-chevron { width: 14px; height: 14px; flex-shrink: 0; }
+.account[open] .account-chevron { transform: rotate(180deg); }
+.dropdown { position: absolute; right: 0; top: 50px; min-width: 180px; background: white; border: 1px solid #e0e5de; padding: 6px; box-shadow: 0 12px 32px #20362f14; border-radius: 10px; z-index: 2; }
+.dropdown a, .dropdown button { display: block; width: 100%; padding: 10px 14px; border: 0; background: transparent; text-align: left; color: #20362f; text-decoration: none; border-radius: 6px; }
+.dropdown a:hover, .dropdown button:hover { background: #f0f3ee; }
+main { max-width: 1120px; margin: 0 auto; padding: 64px 32px 80px; }
+h1 { font-size: clamp(30px, 4vw, 44px); line-height: 1.2; font-weight: 600; letter-spacing: -1.5px; margin: 12px 0 18px; overflow-wrap: anywhere; }
+h2 { font-size: 22px; font-weight: 600; letter-spacing: -.6px; margin: 0; }
+p { margin: 0 0 16px; }
+.muted { color: #65736a; }
+.eyebrow { color: #547362; }
+.auth-layout { display: grid; grid-template-columns: 1fr 1fr; align-items: start; gap: 80px; padding-top: 40px; }
+.intro { padding-top: 34px; }
+.intro p { max-width: 360px; }
+.intro-note { margin-top: 56px; padding-top: 22px; border-top: 1px solid #d9e0d9; font-size: 14px; }
+.card { background: white; border: 1px solid #e0e5de; border-radius: 16px; padding: 32px; }
+.auth-card { max-width: 460px; width: 100%; }
+.auth-card h2 { margin-bottom: 24px; }
+.auth-switch { border-top: 1px solid #e5e9e2; margin: 24px 0 0; padding-top: 20px; font-size: 14px; text-align: center; }
+hanko-login, hanko-registration, hanko-profile { display: block; --font-family: var(--app-font-family); --color: #52645b; --color-shade-1: #65736a; --font-weight: 400; --headline1-font-weight: 500; --headline2-font-weight: 500; --brand-color: #244c40; --link-color: #246b50; --link-text-decoration: underline; --link-text-decoration-hover: underline; --brand-color-shade-1: #183c30; --background-color: #fff; --border-radius: 8px; --container-padding: 0; --container-max-width: 100%; }
+.section-heading { display: flex; align-items: center; justify-content: space-between; gap: 16px; margin: 48px 0 18px; }
+.count { font-size: 13px; color: #65736a; }
+.applications { margin: 0; padding: 0; list-style: none; border: 1px solid #e0e5de; border-radius: 14px; background: #fff; overflow: hidden; }
+.application { padding: 24px; display: flex; align-items: center; gap: 20px; }
+.application + .application { border-top: 1px solid #e7ebe5; }
+.document-icon { color: #547362; border: 1px solid #dce5da; background: #f5f7f1; border-radius: 10px; width: 44px; height: 48px; display: grid; place-items: center; flex-shrink: 0; }
+.application-body { flex: 1; }
+.application h3 { margin: 0 0 4px; font-size: 16px; font-weight: 600; }
+.application p { margin: 0; font-size: 14px; color: #65736a; }
+.status { white-space: nowrap; padding: 4px 10px; border-radius: 20px; font-size: 12px; background: #eef0eb; color: #52604f; }
+.status.pending { background: #faf0dc; color: #825c20; }
+.status.done { background: #e6f1e8; color: #31633e; }
+.footnote { margin-top: 18px; font-size: 13px; color: #65736a; }
+.back { display: inline-block; margin-bottom: 24px; font-size: 14px; text-decoration: none; }
+.profile-card { max-width: 680px; margin-top: 32px; }
+.button { border: 0; background: #244c40; color: white; border-radius: 8px; padding: 10px 18px; }
+.notice { background: #fff5e6; border: 1px solid #e6d3b4; padding: 14px 18px; border-radius: 8px; margin-bottom: 24px; }
+button:disabled { cursor: wait; opacity: .65; }
+@media (max-width: 720px) { .bar-inner { padding: 16px 20px; } main { padding: 36px 20px 60px; } .auth-layout { grid-template-columns: 1fr; gap: 28px; padding-top: 0; } .intro { padding-top: 0; } .intro-note { display: none; } .auth-card { max-width: none; } .card { padding: 24px; } .application { flex-wrap: wrap; gap: 14px; padding: 20px; } .application .status { margin-left: 58px; } .demo-label { font-size: 10px; } }
+
+/* Keep Hanko links recognizable independently of their color. */
+:is(hanko-login, hanko-registration, hanko-profile)::part(link) { text-underline-offset: 3px; text-decoration-thickness: 1px; }
+:is(hanko-login, hanko-registration, hanko-profile)::part(link):hover { color: #183c30; text-decoration-thickness: 2px; }
+:is(hanko-login, hanko-registration, hanko-profile)::part(link):focus-visible { outline: 2px solid #246b50; outline-offset: 3px; border-radius: 2px; }
+
+:is(hanko-login, hanko-registration, hanko-profile)::part(headline1),
+:is(hanko-login, hanko-registration, hanko-profile)::part(headline2) { color: #40594d; letter-spacing: -0.4px; }

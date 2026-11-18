@@ -1,0 +1,19 @@
+{
+  "name": "hanko-demo",
+  "version": "1.0.0",
+  "description": "Deutschsprachiges Demo-Portal mit Hanko",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test": "node --test"
+  },
+  "type": "module",
+  "dependencies": {
+    "@teamhanko/hanko-elements": "^3.1.0"
+  },
+  "private": true,
+  "devDependencies": {
+    "vite": "^8.3.8"
+  }
+}
